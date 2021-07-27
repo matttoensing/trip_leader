@@ -8,4 +8,6 @@ class User < ApplicationRecord
   validates :username, uniqueness: true, if: -> { self.username.present? }
   validates :email, presence: true
   validates :password, presence: true
+
+  has_many :trips
 end
