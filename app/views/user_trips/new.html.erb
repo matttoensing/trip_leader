@@ -1,0 +1,17 @@
+
+<%= form_tag("/users/#{@user.id}/trips/#{@trip.id}", method: :post) do %>
+   <%= label_tag :name %>
+   <%= text_field_tag :name %><br>
+   <%= label_tag :river %>
+   <%= text_field_tag :river %><br>
+   <%= label_tag :section %>
+   <%= text_field_tag :section %><br>
+   <%= label_tag :grade %>
+   <%= number_field_tag :grade %><br>
+   <%= label_tag :start_time %>
+   <%= date_field(:trip, :starting_date) %><br>
+   <%= label_tag :end_time %>
+   <%= date_field(:trip, :end_date) %><br>
+
+   <%= submit_tag "Submit" %>
+<% end %>
